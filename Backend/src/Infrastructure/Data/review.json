@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Juan Perez",
+    "rating": 5,
+    "comment": "Es un producto muy bueno",
+    "productId": 1
+  },
+  {
+    "name": "Luis Sanchez",
+    "rating": 5,
+    "comment": "La mejor compra que he hecho",
+    "productId": 2
+  },
+  {
+    "name": "Felipe Castillo",
+    "rating": 5,
+    "comment": "Siempre cumple sus funciones, nunca falla",
+    "productId": 3
+  },
+  {
+    "name": "Maria Lopez",
+    "rating": 5,
+    "comment": "Fantastico device, funcionamiento excepcional",
+    "productId": 4
+  },
+  {
+    "name": "Pedro Santillan",
+    "rating": 5,
+    "comment": "Lo consegui con una oferta increible",
+    "productId": 5
+  },
+  {
+    "name": "Jeff Smith",
+    "rating": 5,
+    "comment": "Volvere a comprar otro, es un producto con grandes beneficios",
+    "productId": 6
+  }
+]
