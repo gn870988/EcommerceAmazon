@@ -1,5 +1,6 @@
 ﻿using Ecommerce.Api.Errors;
 using Ecommerce.Application.Exceptions;
+using Ecommerce.Infrastructure.Extensions;
 using Newtonsoft.Json;
 using System.Net;
 
@@ -56,7 +57,7 @@ public class ExceptionMiddleware
                     break;
             }
 
-            if (string.IsNullOrEmpty(result))
+            if (result.IsNullOrEmpty())
             {
                 result = JsonConvert.SerializeObject(
                     new CodeErrorException(statusCode,

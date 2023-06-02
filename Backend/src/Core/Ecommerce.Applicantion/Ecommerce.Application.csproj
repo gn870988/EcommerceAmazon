@@ -37,7 +37,13 @@
   <ItemGroup>
     <Folder Include="Contracts\Infrastructure\" />
     <Folder Include="Contracts\Identity\" />
+    <Folder Include="Features\Images\Queries\ViewModels\" />
     <Folder Include="Features\Products\Queries\GetProductList\" />
+    <Folder Include="Features\Products\Queries\GetProductById\" />
+    <Folder Include="Features\Products\Queries\PaginationProducts\" />
+    <Folder Include="Features\Products\Queries\ViewModels\" />
+    <Folder Include="Features\Reviews\Queries\ViewModels\" />
+    <Folder Include="Features\Shared\Queries\" />
     <Folder Include="Models\Authorization\" />
     <Folder Include="Models\Email\" />
     <Folder Include="Models\ImageManagement\" />
@@ -45,8 +51,8 @@
     <Folder Include="Behaviors\" />
     <Folder Include="Exceptions\" />
     <Folder Include="Mappings\" />
-    <Folder Include="Specifications\" />
     <Folder Include="Persistence\" />
+    <Folder Include="Specifications\Products\" />
   </ItemGroup>
 
   <PropertyGroup>

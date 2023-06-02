@@ -24,6 +24,7 @@
   <ItemGroup>
     <Folder Include="ImageCloudinary\" />
     <Folder Include="MessageImplementation\" />
+    <Folder Include="Extensions\" />
     <Folder Include="Specification\" />
     <Folder Include="Repositories\" />
     <Folder Include="Services\Auth\" />

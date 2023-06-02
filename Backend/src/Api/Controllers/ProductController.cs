@@ -1,4 +1,8 @@
-﻿using Ecommerce.Application.Features.Products.Queries.GetProductList;
+﻿using Ecommerce.Application.Features.Products.Queries.GetProductById;
+using Ecommerce.Application.Features.Products.Queries.GetProductList;
+using Ecommerce.Application.Features.Products.Queries.PaginationProducts;
+using Ecommerce.Application.Features.Products.Queries.ViewModels;
+using Ecommerce.Application.Features.Shared.Queries;
 using Ecommerce.Domain.Entities;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
@@ -27,5 +31,29 @@ public class ProductController : ControllerBase
         var products = await _mediator.Send(query);
 
         return Ok(products);
+    }
+
+    [AllowAnonymous]
+    [HttpGet("pagination", Name = "PaginationProduct")]
+    [ProducesResponseType(typeof(PaginationViewModel<ProductViewModel>), (int)HttpStatusCode.OK)]
+    public async Task<ActionResult<PaginationViewModel<ProductViewModel>>> PaginationProduct(
+        [FromQuery] PaginationProductsQuery paginationProductsQuery
+    )
+    {
+        paginationProductsQuery.Status = ProductStatus.Active;
+        var paginationProduct = await _mediator.Send(paginationProductsQuery);
+
+        return Ok(paginationProduct);
+    }
+
+    [AllowAnonymous]
+    [HttpGet("{id}", Name = "GetProductById")]
+    [ProducesResponseType(typeof(ProductViewModel), (int)HttpStatusCode.OK)]
+    public async Task<ActionResult<ProductViewModel>> GetProductById(int id)
+    {
+        var query = new GetProductByIdQuery(id);
+        var productById = await _mediator.Send(query);
+
+        return Ok(productById);
     }
 }
