@@ -37,6 +37,7 @@ public class EmailService : IEmailService
         catch (Exception)
         {
             Logger.LogError("The email could not be sent, there are errors");
+
             return false;
         }
     }

@@ -39,6 +39,9 @@
     <Folder Include="Contracts\Identity\" />
     <Folder Include="Features\Addresses\ViewModels\" />
     <Folder Include="Features\Auths\Users\Commands\LoginUser\" />
+    <Folder Include="Features\Auths\Users\Commands\ResetPasswordByToken\" />
+    <Folder Include="Features\Auths\Users\Commands\ResetPassword\" />
+    <Folder Include="Features\Auths\Users\Commands\SendPassword\" />
     <Folder Include="Features\Auths\Users\Commands\RegisterUser\" />
     <Folder Include="Features\Auths\Users\ViewModels\" />
     <Folder Include="Features\Images\Queries\ViewModels\" />
