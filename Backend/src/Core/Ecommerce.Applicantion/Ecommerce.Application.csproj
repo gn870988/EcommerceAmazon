@@ -39,10 +39,16 @@
     <Folder Include="Contracts\Identity\" />
     <Folder Include="Features\Addresses\ViewModels\" />
     <Folder Include="Features\Auths\Users\Commands\LoginUser\" />
+    <Folder Include="Features\Auths\Users\Commands\UpdateAdminStatusUser\" />
+    <Folder Include="Features\Auths\Users\Commands\UpdateAdminUserCommand\" />
     <Folder Include="Features\Auths\Users\Commands\ResetPasswordByToken\" />
     <Folder Include="Features\Auths\Users\Commands\ResetPassword\" />
     <Folder Include="Features\Auths\Users\Commands\SendPassword\" />
     <Folder Include="Features\Auths\Users\Commands\RegisterUser\" />
+    <Folder Include="Features\Auths\Users\Queries\GetUserById\" />
+    <Folder Include="Features\Auths\Users\Queries\GetUserByToken\" />
+    <Folder Include="Features\Auths\Users\Queries\GetUserByUsername\" />
+    <Folder Include="Features\Auths\Users\Queries\PaginationUsers\" />
     <Folder Include="Features\Auths\Users\ViewModels\" />
     <Folder Include="Features\Images\Queries\ViewModels\" />
     <Folder Include="Features\Products\Queries\GetProductList\" />
@@ -59,6 +65,7 @@
     <Folder Include="Exceptions\" />
     <Folder Include="Mappings\" />
     <Folder Include="Persistence\" />
+    <Folder Include="Specifications\Users\" />
     <Folder Include="Specifications\Products\" />
   </ItemGroup>
 
