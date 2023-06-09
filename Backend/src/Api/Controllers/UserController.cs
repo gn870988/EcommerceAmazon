@@ -11,6 +11,7 @@ using Ecommerce.Application.Features.Auths.Users.Queries.GetUserById;
 using Ecommerce.Application.Features.Auths.Users.Queries.GetUserByToken;
 using Ecommerce.Application.Features.Auths.Users.Queries.GetUserByUsername;
 using Ecommerce.Application.Features.Auths.Users.Queries.PaginationUsers;
+using Ecommerce.Application.Features.Auths.Users.Queries.Roles.GetRoles;
 using Ecommerce.Application.Features.Auths.Users.ViewModels;
 using Ecommerce.Application.Features.Shared.Queries;
 using Ecommerce.Application.Models.Authorization;
@@ -163,6 +164,16 @@ public class UserController : ControllerBase
         var paginationUser = await _mediator.Send(paginationUsersQuery);
 
         return Ok(paginationUser);
+    }
+
+    [AllowAnonymous]
+    [HttpGet("roles", Name = "GetRolesList")]
+    [ProducesResponseType(typeof(List<string>), (int)HttpStatusCode.OK)]
+    public async Task<ActionResult<List<string>>> GetRolesList()
+    {
+        var query = new GetRolesQuery();
+
+        return Ok(await _mediator.Send(query));
     }
 
 }

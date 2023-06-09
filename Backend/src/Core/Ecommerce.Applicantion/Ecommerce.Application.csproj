@@ -50,6 +50,9 @@
     <Folder Include="Features\Auths\Users\Queries\GetUserByUsername\" />
     <Folder Include="Features\Auths\Users\Queries\PaginationUsers\" />
     <Folder Include="Features\Auths\Users\ViewModels\" />
+    <Folder Include="Features\Categories\ViewModels\" />
+    <Folder Include="Features\Countries\ViewModels\" />
+    <Folder Include="Features\Countries\Queries\GetCountryList\" />
     <Folder Include="Features\Images\Queries\ViewModels\" />
     <Folder Include="Features\Products\Queries\GetProductList\" />
     <Folder Include="Features\Products\Queries\GetProductById\" />
