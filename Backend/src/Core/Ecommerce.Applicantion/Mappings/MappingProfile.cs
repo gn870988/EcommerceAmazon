@@ -2,6 +2,8 @@
 using Ecommerce.Application.Features.Categories.ViewModels;
 using Ecommerce.Application.Features.Countries.ViewModels;
 using Ecommerce.Application.Features.Images.Queries.ViewModels;
+using Ecommerce.Application.Features.Products.Commands.CreateProduct;
+using Ecommerce.Application.Features.Products.Commands.UpdateProduct;
 using Ecommerce.Application.Features.Products.Queries.ViewModels;
 using Ecommerce.Application.Features.Reviews.Queries.ViewModels;
 using Ecommerce.Domain.Entities;
@@ -20,5 +22,8 @@ public class MappingProfile : Profile
         CreateMap<Review, ReviewViewModel>();
         CreateMap<Country, CountryViewModel>();
         CreateMap<Category, CategoryViewModel>();
+        CreateMap<CreateProductCommand, Product>();
+        CreateMap<CreateProductImageCommand, Image>();
+        CreateMap<UpdateProductCommand, Product>();
     }
 }
