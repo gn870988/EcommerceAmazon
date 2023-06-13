@@ -66,6 +66,10 @@
     <Folder Include="Features\Reviews\Queries\PaginationReviews\" />
     <Folder Include="Features\Reviews\Queries\ViewModels\" />
     <Folder Include="Features\Shared\Queries\" />
+    <Folder Include="Features\ShoppingCarts\Commands\DeleteShoppingCartItem\" />
+    <Folder Include="Features\ShoppingCarts\Commands\UpdateShoppingCart\" />
+    <Folder Include="Features\ShoppingCarts\Queries\GetShoppingCartById\" />
+    <Folder Include="Features\ShoppingCarts\ViewModels\" />
     <Folder Include="Models\Authorization\" />
     <Folder Include="Models\Email\" />
     <Folder Include="Models\ImageManagement\" />
