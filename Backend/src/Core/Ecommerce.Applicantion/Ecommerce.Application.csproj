@@ -37,6 +37,7 @@
   <ItemGroup>
     <Folder Include="Contracts\Infrastructure\" />
     <Folder Include="Contracts\Identity\" />
+    <Folder Include="Features\Addresses\Commands\CreateAddress\" />
     <Folder Include="Features\Addresses\ViewModels\" />
     <Folder Include="Features\Auths\Users\Commands\LoginUser\" />
     <Folder Include="Features\Auths\Users\Commands\UpdateAdminStatusUser\" />
@@ -54,6 +55,10 @@
     <Folder Include="Features\Countries\ViewModels\" />
     <Folder Include="Features\Countries\Queries\GetCountryList\" />
     <Folder Include="Features\Images\Queries\ViewModels\" />
+    <Folder Include="Features\Orders\Commands\CreateOrder\" />
+    <Folder Include="Features\Orders\Commands\UpdateOrder\" />
+    <Folder Include="Features\Orders\Queries\GetOrdersById\" />
+    <Folder Include="Features\Orders\ViewModels\" />
     <Folder Include="Features\Products\Commands\CreateProduct\" />
     <Folder Include="Features\Products\Commands\DeleteProduct\" />
     <Folder Include="Features\Products\Commands\UpdateProduct\" />
@@ -73,6 +78,8 @@
     <Folder Include="Models\Authorization\" />
     <Folder Include="Models\Email\" />
     <Folder Include="Models\ImageManagement\" />
+    <Folder Include="Models\Order\" />
+    <Folder Include="Models\Payment\" />
     <Folder Include="Models\Token\" />
     <Folder Include="Behaviors\" />
     <Folder Include="Exceptions\" />

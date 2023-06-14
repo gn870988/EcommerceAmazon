@@ -1,7 +1,9 @@
 ﻿using AutoMapper;
+using Ecommerce.Application.Features.Addresses.ViewModels;
 using Ecommerce.Application.Features.Categories.ViewModels;
 using Ecommerce.Application.Features.Countries.ViewModels;
 using Ecommerce.Application.Features.Images.Queries.ViewModels;
+using Ecommerce.Application.Features.Orders.ViewModels;
 using Ecommerce.Application.Features.Products.Commands.CreateProduct;
 using Ecommerce.Application.Features.Products.Commands.UpdateProduct;
 using Ecommerce.Application.Features.Products.Queries.ViewModels;
@@ -29,9 +31,13 @@ public class MappingProfile : Profile
 
         CreateMap<ShoppingCart, ShoppingCartViewModel>()
             .ForMember(p => p.ShoppingCartId, x => x.MapFrom(a => a.ShoppingCartMasterId));
-
         CreateMap<ShoppingCartItem, ShoppingCartItemViewModel>();
-
         CreateMap<ShoppingCartItemViewModel, ShoppingCartItem>();
+
+        CreateMap<Address, AddressViewModel>();
+
+        CreateMap<Order, OrderViewModel>();
+        CreateMap<OrderItem, OrderItemViewModel>();
+        CreateMap<OrderAddress, AddressViewModel>();
     }
 }
