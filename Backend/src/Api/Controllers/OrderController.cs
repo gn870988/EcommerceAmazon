@@ -1,9 +1,12 @@
-﻿using Ecommerce.Application.Features.Addresses.Commands.CreateAddress;
+﻿using Ecommerce.Application.Contracts.Identity;
+using Ecommerce.Application.Features.Addresses.Commands.CreateAddress;
 using Ecommerce.Application.Features.Addresses.ViewModels;
 using Ecommerce.Application.Features.Orders.Commands.CreateOrder;
 using Ecommerce.Application.Features.Orders.Commands.UpdateOrder;
 using Ecommerce.Application.Features.Orders.Queries.GetOrdersById;
+using Ecommerce.Application.Features.Orders.Queries.PaginationOrders;
 using Ecommerce.Application.Features.Orders.ViewModels;
+using Ecommerce.Application.Features.Shared.Queries;
 using Ecommerce.Application.Models.Authorization;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
@@ -17,10 +20,12 @@ namespace Ecommerce.Api.Controllers;
 public class OrderController : ControllerBase
 {
     private readonly IMediator _mediator;
+    private readonly IAuthService _authService;
 
-    public OrderController(IMediator mediator)
+    public OrderController(IMediator mediator, IAuthService authService)
     {
         _mediator = mediator;
+        _authService = authService;
     }
 
     [HttpPost("address", Name = "CreateAddress")]
@@ -52,6 +57,32 @@ public class OrderController : ControllerBase
         var query = new GetOrdersByIdQuery(id);
 
         return Ok(await _mediator.Send(query));
+    }
+
+    [HttpGet("paginationByUsername", Name = "PaginationOrderByUsername")]
+    [ProducesResponseType(typeof(PaginationViewModel<OrderViewModel>), (int)HttpStatusCode.OK)]
+    public async Task<ActionResult<PaginationViewModel<OrderViewModel>>> PaginationOrderByUsername
+    (
+        [FromQuery] PaginationOrdersQuery paginationOrdersParams
+    )
+    {
+        paginationOrdersParams.Username = _authService.GetSessionUser();
+        var pagination = await _mediator.Send(paginationOrdersParams);
+
+        return Ok(pagination);
+    }
+
+    [Authorize(Roles = Role.ADMIN)]
+    [HttpGet("paginationAdmin", Name = "PaginationOrder")]
+    [ProducesResponseType(typeof(PaginationViewModel<OrderViewModel>), (int)HttpStatusCode.OK)]
+    public async Task<ActionResult<PaginationViewModel<OrderViewModel>>> PaginationOrder
+    (
+        [FromQuery] PaginationOrdersQuery paginationOrdersParams
+    )
+    {
+        var pagination = await _mediator.Send(paginationOrdersParams);
+
+        return Ok(pagination);
     }
 
 }

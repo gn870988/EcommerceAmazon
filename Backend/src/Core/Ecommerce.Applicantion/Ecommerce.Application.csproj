@@ -58,7 +58,9 @@
     <Folder Include="Features\Orders\Commands\CreateOrder\" />
     <Folder Include="Features\Orders\Commands\UpdateOrder\" />
     <Folder Include="Features\Orders\Queries\GetOrdersById\" />
+    <Folder Include="Features\Orders\Queries\PaginationOrders\" />
     <Folder Include="Features\Orders\ViewModels\" />
+    <Folder Include="Features\Payments\Commands\CreatePayment\" />
     <Folder Include="Features\Products\Commands\CreateProduct\" />
     <Folder Include="Features\Products\Commands\DeleteProduct\" />
     <Folder Include="Features\Products\Commands\UpdateProduct\" />
@@ -85,6 +87,7 @@
     <Folder Include="Exceptions\" />
     <Folder Include="Mappings\" />
     <Folder Include="Persistence\" />
+    <Folder Include="Specifications\Orders\" />
     <Folder Include="Specifications\Reviews\" />
     <Folder Include="Specifications\Users\" />
     <Folder Include="Specifications\Products\" />
