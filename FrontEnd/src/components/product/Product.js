@@ -26,8 +26,12 @@ const Product = ({ product, col }) => {
             <span id="no_of_reviews">( {product.reviews.length} Reviews)</span>
           </div>
           <p className="card-text">${product.price}</p>
-          <Link id="view_btn" className="btn btn-block">
-            See details
+          <Link
+            id="view_btn"
+            className="btn btn-block"
+            to={`/product/${product.id}`}
+          >
+            View
           </Link>
         </div>
       </div>
